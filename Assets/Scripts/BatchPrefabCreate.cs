@@ -1,0 +1,22 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BatchPrefabCreate : MonoBehaviour
+{
+	public GameObject Prefab;
+	public Transform[] Spawns;
+	
+
+
+	public void Create() {
+		
+		for (int i = 0; i < Spawns.Length; i++) {
+			Instantiate(Prefab , Spawns[i].position, Spawns[i].rotation );
+
+		}
+	}
+
+}
+
